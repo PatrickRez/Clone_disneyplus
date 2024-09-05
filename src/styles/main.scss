@@ -1,5 +1,6 @@
 @use 'variaveis';
 @use 'hero';
+@use 'shows';
 
 @font-face {
     font-family: Avenir;
@@ -13,28 +14,29 @@
     font-weight: 700;
 }
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: variaveis.$corDeFundo;
-    font-family: Avenir, sans-serif;
-}
-
 @mixin text($fontSize: 16px){
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$corTextoPrincipal;
 }
 
-@mixin title($fontSize: 28px){
+@mixin title($fontSize: 40px){
     @include text($fontSize);
     color: variaveis.$corTextoSegundario;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
 
 .text--big {
     @include text(18px);
