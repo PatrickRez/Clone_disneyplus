@@ -16,6 +16,7 @@
 
 @mixin text($fontSize: 16px){
     font-size: $fontSize;
+    
     line-height: $fontSize + 10px;
     color: variaveis.$corTextoPrincipal;
 }
